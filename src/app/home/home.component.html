@@ -1,0 +1,444 @@
+<!--Top Bar-->
+<app-topbar></app-topbar>
+<!--End Top bar-->
+<!-- ============================================================== -->
+<!-- Start Page Content here -->
+<!-- ============================================================== -->
+
+<!--TESTING USE
+<div class="wrapper">
+    <div class="container-fluid"> 
+        <div class="row">
+            <div class="col-12">
+                
+            </div>
+        </div>
+    </div>
+</div>
+-->
+<!--TESTING USE-->
+
+        <div class="wrapper">
+            <div class="container-fluid"> 
+                <!-- Notification -->
+                <div class="row">
+                    <div class="col-12">
+                            <div class="page-title-box">
+                                <div class="page-title-left">
+                                    <form class="form-inline">
+                                        <div class="form-group">
+                                            <div class="input-group input-group-sm">          
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text bg-blue border-blue text-white">
+                                                        <i class="mdi mdi-calendar-range font-13"></i>
+                                                    </span>
+                                                </div> 
+                                                <h1>开群天数: {{diffInDays}} 天</h1>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <p>
+                                    <ngb-alert (close)="SHOW1='false'" *ngIf="SHOW1=='true'">
+                                            <h3><strong>Welcome!</strong> 欢迎来道马来西亚Soul友。</h3>
+                                    </ngb-alert>
+                                </p>
+                                <h4 class="d-flex justify-content-center"><b>Countdown to New Year 2020</b></h4>
+                                <iframe src="https://soulmy0521.github.io/CountDown/" 	
+                                height=80px width=100% style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media">
+                                  <p>Your browser does not support iframes.</p>
+                                </iframe>
+                            </div>
+                        </div>       
+                </div>
+                <!--置顶视频-->
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            <button type="button" class="btn btn-outline-primary" (click)="isCollapsedVideo = !isCollapsedVideo"
+                                    [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample" ngbPopover="点击观看精彩视频！" triggers="mouseenter:mouseleave">
+                                置顶视频
+                            </button>
+                        </p>
+                    </div>
+                    <div class="col-12">
+                        <div id="collapseExample" [ngbCollapse]="isCollapsedVideo">
+                            <div class="card">
+                                <div class="input-group">
+                                    <input type="text" [(ngModel)]="password" class="form-control" placeholder="Enter hidden password" aria-label="Enter hidden password">
+                                    <div class="input-group-append">
+                                        <button (click)="Unlock(password)" class="btn btn-dark waves-effect waves-light" type="button">Unlock</button>
+                                    </div>
+                                </div>
+                                <div class="card-body" *ngIf="Unlocked=='unlock'">
+                                    <video width="200" controls>
+                                        <source src="assets\video\ddg1.mp4" type="video/mp4">
+                                        Your browser does not support HTML5 video.
+                                    </video> &nbsp;
+                                    <video width="200" controls>
+                                            <source src="assets\video\ww1.mp4" type="video/mp4">
+                                            Your browser does not support HTML5 video.
+                                    </video> &nbsp;
+                                    <video width="200" controls>
+                                            <source src="assets\video\xcc1.mp4" type="video/mp4">
+                                            Your browser does not support HTML5 video.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--EnD置顶视频-->
+
+                <!--SlidePicture
+                <div class="row">
+                    <ngb-carousel >
+                        <ng-template ngbSlide >
+                          <div  class="picsum-img-wrapper" id="imgcenter">
+                            <img src="..\assets\images\small\img-2.jpg" alt="Random first slide"  >
+                          </div>
+                          <div class="carousel-caption">
+                            <h3>830 Gathering</h3>
+                            <p>830 Gathering.</p>
+                          </div>
+                        </ng-template>
+                    </ngb-carousel>
+                </div>
+                -->
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box">
+                            <!--<h4 class="page-title">Dashboard(最后更新:2019年10月20日)</h4>-->
+                            <h4 class="page-title">Dashboard</h4>
+                            <h6>(最后更新:2019年11月25日)</h6>
+                        </div>
+                    </div>
+                </div>     
+                <!-- end page title --> 
+
+                <div class="row">
+                    <div class="col-md-6 col-xl-3">
+                        <div class="widget-rounded-circle card-box">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="avatar-lg rounded-circle shadow-lg bg-primary border-primary border">
+                                        <i class="fe-heart font-22 avatar-title text-white"></i>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-right">
+                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">{{Total}}</span></h3>
+                                        <p class="text-muted mb-1 text-truncate">Total Souler</p>
+                                    </div>
+                                </div>
+                            </div> <!-- end row-->
+                        </div> <!-- end widget-rounded-circle-->
+                    </div> <!-- end col-->
+
+                    <div class="col-md-6 col-xl-3">
+                        <div class="widget-rounded-circle card-box">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="avatar-lg rounded-circle shadow-lg bg-success border-success border">
+                                        <i class="	fa fa-user font-22 avatar-title text-white"></i>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-right">
+                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">{{Admin}}</span></h3>
+                                        <p class="text-muted mb-1 text-truncate">Admin</p>
+                                    </div>
+                                </div>
+                            </div> <!-- end row-->
+                        </div> <!-- end widget-rounded-circle-->
+                    </div> <!-- end col-->
+						
+                    <div class="col-md-6 col-xl-3">
+                        <div class="widget-rounded-circle card-box">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="avatar-lg rounded-circle shadow-lg bg-warning border-warning border">
+                                        <i class="fa fa-users font-22 avatar-title text-white"></i>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-right">
+                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">{{Total-Admin}}</span></h3>
+                                        <p class="text-muted mb-1 text-truncate">Souler</p>
+                                    </div>
+                                </div>
+                            </div> <!-- end row-->	
+                        </div> <!-- end widget-rounded-circle-->	
+                    </div> <!-- end col-->	
+					<!--						
+                    <div class="col-md-6 col-xl-3" style="position:absolute;">
+                        <div class="widget-rounded-circle card-box">
+                            <div class="row">
+								<div id="container1" style="float:none;margin: 0px auto; float:right;"></div>
+                            </div> <!-- end row
+                        </div> <!-- end widget-rounded-circle
+                    </div> <!-- end col-->
+			
+					
+						
+                </div>
+                <!-- end row-->   
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box">
+                            <div class="page-title-right">
+                            </div>
+                            <h4 class="page-title">Admin</h4>
+                        </div>
+                    </div>
+                </div>
+				
+                <div class="row">
+                    <div class="col-md-6 col-xl-3">
+                        <div class="widget-rounded-circle card-box">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="avatar-lg rounded-circle shadow-lg bg-success border-success border">
+                                            <img src="assets/avatars/qz3.png" alt="" height="70"  style="border-radius: 50%;" >
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-right">
+                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">1</span></h3>
+                                        <p class="text-muted mb-1 text-truncate">Admin</p>
+                                    </div>
+                                </div>
+								<p>群主很忙Klang</p>
+                            </div> <!-- end row-->
+                        </div> <!-- end widget-rounded-circle-->
+                    </div> <!-- end col-->	                    
+					<div class="col-md-6 col-xl-3">
+                        <div class="widget-rounded-circle card-box">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="avatar-lg rounded-circle shadow-lg bg-success border-success border">
+                                        <!--<i class="	fa fa-user font-22 avatar-title text-white"></i>-->
+										 <img src="assets/avatars/wilson2.jpg" alt="" height="70"  style="border-radius: 50%;">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-right">
+                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">2</span></h3>
+                                        <p class="text-muted mb-1 text-truncate">Admin</p>
+                                    </div>
+                                </div>
+								<p>Wil求包养 管理员_JB miss u</p>
+                            </div> <!-- end row-->
+                        </div> <!-- end widget-rounded-circle-->
+                    </div> <!-- end col-->	                    
+					<div class="col-md-6 col-xl-3">
+                        <div class="widget-rounded-circle card-box">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="avatar-lg rounded-circle shadow-lg bg-success border-success border">
+                                            <img src="assets/avatars/cony.jpg" alt="" height="70"  style="border-radius: 50%;">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-right">
+                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">3</span></h3>
+                                        <p class="text-muted mb-1 text-truncate">Admin</p>
+                                    </div>
+                                </div>
+								<p>管coni管理员想你了Sarawak</p>
+                            </div> <!-- end row-->
+                        </div> <!-- end widget-rounded-circle-->
+                    </div> <!-- end col-->	     
+                    <div class="col-md-6 col-xl-3">
+                        <div class="widget-rounded-circle card-box">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="avatar-lg rounded-circle shadow-lg bg-success border-success border">
+                                            <img src="assets/avatars/huf2.jpg" alt="" height="70"  style="border-radius: 50%;" >
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-right">
+                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">4</span></h3>
+                                        <p class="text-muted mb-1 text-truncate">Admin</p>
+                                    </div>
+                                </div>
+                                <p>潜水·等待·管理员砂捞越</p>
+                            </div> <!-- end row-->
+                        </div> <!-- end widget-rounded-circle-->
+                    </div> <!-- end col-->				
+                    <div class="col-md-6 col-xl-3">
+                        <div class="widget-rounded-circle card-box">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="avatar-lg rounded-circle shadow-lg bg-success border-success border">
+                                            <img src="assets/avatars/kat1.png" alt="" height="70"  style="border-radius: 50%;" >
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-right">
+                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">5</span></h3>
+                                        <p class="text-muted mb-1 text-truncate">Admin</p>
+                                    </div>
+                                </div>
+                                <p>kat  kat 管理员 ～KL</p>
+                            </div> <!-- end row-->
+                        </div> <!-- end widget-rounded-circle-->
+                    </div> <!-- end col-->				
+                    <div class="col-md-6 col-xl-3">
+                        <div class="widget-rounded-circle card-box">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="avatar-lg rounded-circle shadow-lg bg-success border-success border">
+                                            <img src="assets/avatars/xyy.png" alt="" height="70"  style="border-radius: 50%;" >
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-right">
+                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">6</span></h3>
+                                        <p class="text-muted mb-1 text-truncate">Admin</p>
+                                    </div>
+                                </div>
+                                <p>颖(✯⸜管理员  彭亨</p>
+                            </div> <!-- end row-->
+                        </div> <!-- end widget-rounded-circle-->
+                    </div> <!-- end col-->				
+                </div>
+                    
+				<!--Souler----------------------------------->
+				<div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box">
+                            <div class="page-title-right">
+                            </div>
+                            <h4 class="page-title">Souler</h4>
+                            <!--
+                            <div class="input-group">
+                                <input type="text" [(ngModel)]="passwordInfo" class="form-control" placeholder="Enter hidden password" aria-label="Enter hidden password">
+                                <div class="input-group-append">
+                                    <button (click)="UnlockInfo(passwordInfo)" class="btn btn-dark waves-effect waves-light" type="button">Button</button>
+                                </div>
+                            </div>
+                            -->
+                        </div>
+                    </div>
+                </div> 
+				<div class="row" *ngIf="UnlockedO==true">
+					<div class="col-md-6 col-xl-3" *ngFor="let soulers of Soulers">
+                        <div class="widget-rounded-circle card-box">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="avatar-lg rounded-circle shadow-lg bg-warning border-warning border">
+                                        <img src="assets/avatars/{{soulers.Img}}" alt="" height="70"  style="border-radius: 50%;" >
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-right">
+                                        <h3 class="text-dark mt-1"><span data-plugin="counterup"></span></h3>
+                                        <p class="text-muted mb-1 text-truncate">Souler</p>
+                                    </div>
+                                </div>
+								<p>{{soulers.Name}}</p>
+                            </div> <!-- end row-->	
+                        </div> <!-- end widget-rounded-circle-->	
+                    </div> <!-- end col-->											
+                </div>
+                <!--For Admin--------------->
+                <div class="row" *ngIf="UnlockedA=='unlock'">
+                        <div class="col-md-6 col-xl-3" *ngFor="let soulers of Soulers">
+                            <div class="widget-rounded-circle card-box">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="avatar-lg rounded-circle shadow-lg bg-warning border-warning border">
+                                            <img src="assets/avatars/{{soulers.Img}}" alt="" height="70"  style="border-radius: 50%;" >
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="text-right">
+                                            <h3 class="text-dark mt-1"><span data-plugin="counterup"></span></h3>
+                                            <p class="text-muted mb-1 text-truncate">Souler</p>
+                                                <button type="button" class="btn btn-info waves-effect waves-light" (click)="onSelect(soulers,view1)">Info</button>              
+                                        </div>
+                                    </div>
+                                    <p>{{soulers.Name}}</p>
+                                </div> <!-- end row-->	
+                            </div> <!-- end widget-rounded-circle-->	
+                        </div> <!-- end col-->											
+                    </div>
+                 <!--End of souler --------------------------->
+
+                <div class="row">
+                    <ng-template #view1 let-modal>
+                      <div class="modal-header">
+                        <h4 class="modal-title" id="modal-basic-title">Souler Detail( {{selectedSouler.Name}}-{{selectedSouler.Nickname}} )</h4>
+                        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div >
+                            <form class="form-horizontal">
+                                <div class="form-group row mb-3">
+                                    <label for="inputEmail3" class="col-3 col-form-label">年龄:</label>
+                                    <div class="col-9">
+                                        <input type="text" [(ngModel)]="selectedSouler.Age" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Email" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-3">
+                                    <label for="inputEmail3" class="col-3 col-form-label">身高:</label>
+                                    <div class="col-9">
+                                        <input type="text" [(ngModel)]="selectedSouler.Height" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Email" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-3">
+                                    <label for="inputEmail3" class="col-3 col-form-label">体重:</label>
+                                    <div class="col-9">
+                                        <input type="text" [(ngModel)]="selectedSouler.Weight" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Email" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-3">
+                                    <label for="inputEmail3" class="col-3 col-form-label">爱好:</label>
+                                    <div class="col-9">
+                                        <input type="text" [(ngModel)]="selectedSouler.Hobby" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Email" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-3">
+                                    <label for="inputEmail3" class="col-3 col-form-label">职业:</label>
+                                    <div class="col-9">
+                                        <input type="text" [(ngModel)]="selectedSouler.Occupation" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Email" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-3">
+                                    <label for="inputEmail3" class="col-3 col-form-label">是否已婚：</label>
+                                    <div class="col-9">
+                                        <input type="text" [(ngModel)]="selectedSouler.Single" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Email" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-3">
+                                    <label for="inputEmail3" class="col-3 col-form-label">玩Soul的原因：</label>
+                                    <div class="col-9">
+                                        <input type="text" [(ngModel)]="selectedSouler.Reason" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Email" disabled>
+                                    </div>
+                                </div>
+                            </form>          
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-dark" (click)="close()">Close</button>
+                      </div>
+                    </ng-template>
+                </div> 
+				
+                
+            </div> <!-- end container -->
+        </div>
+        <!-- end wrapper -->
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+     
+<!-- Footer Start -->
+<app-footer></app-footer>
+<!-- end Footer -->

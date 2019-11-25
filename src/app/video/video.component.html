@@ -1,0 +1,39 @@
+<!--Top Bar-->
+<app-topbar></app-topbar>
+<!--End Top bar-->
+<div class="wrapper">
+    <div class="container-fluid"> 
+            <!-- Notification -->
+            <div class="row">
+                <h3>精彩视频</h3>
+                <div class="input-group">
+                    <input type="text" [(ngModel)]="password" class="form-control" placeholder="Enter hidden password" aria-label="Enter hidden password">
+                    <div class="input-group-append">
+                        <button (click)="Unlock(password)" class="btn btn-dark waves-effect waves-light" type="button">Unlock</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="container-fluid" *ngIf="Unlocked=='unlock'"> 
+        <!-- Notification -->
+        <div class="row"><br/>
+            <video width="250" controls>
+                <source src="assets\video\ddg1.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            &nbsp;
+            <video width="250" controls>
+                    <source src="assets\video\ww1.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+            </video>
+            &nbsp;
+            <video width="250" controls>
+                    <source src="assets\video\xcc1.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+            </video>
+        </div>
+    </div>
+</div>
+<!-- Footer Start -->
+<app-footer></app-footer>
+<!-- end Footer -->

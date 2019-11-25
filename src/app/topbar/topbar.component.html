@@ -1,0 +1,324 @@
+  <!-- Navigation Bar-->
+  <header id="topnav">
+
+    <!-- Topbar Start -->
+    <div class="navbar-custom">
+        <div class="container-fluid">
+            <ul class="list-unstyled topnav-menu float-right mb-0">
+
+                <li class="dropdown notification-list">
+                    <!-- Mobile menu toggle-->
+                    <a class="navbar-toggle nav-link" id="navbar1">
+                        <!--
+                        <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed"
+                                [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+                                &#9776;
+                        </button>
+                        
+                        <div id="collapseExample,Navbarr"  [ngbCollapse]="isCollapsed">
+                            <div class="card">
+                                <div class="card-body">
+                                    <button type="button" class="btn btn-outline-primary">Home</button><br/>
+                                    <button type="button" class="btn btn-outline-primary">CP</button>   
+                                </div>
+                                
+                            </div>
+                        </div>
+                        -->
+                        <div class="col">
+                            <div ngbDropdown class="d-inline-block">
+                                <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>&#9776;</button>
+                                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                <button ngbDropdownItem routerLink="/Home">Home</button>
+                                <button ngbDropdownItem routerLink="/Couple">Couple</button>
+                                <button ngbDropdownItem routerLink="#" disabled>Single(available)</button>
+                                <button ngbDropdownItem routerLink="/Image">Image</button>
+                                <button ngbDropdownItem routerLink="/Video">Video</button>
+                                <button ngbDropdownItem routerLink="#" disabled>About Us</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- End mobile menu toggle-->
+                </li>
+
+                <li class="d-none d-sm-block">
+                    <form class="app-search">
+                        <div class="app-search-box">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <div class="input-group-append">
+                                    <button class="btn" type="submit">
+                                        <i class="fe-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </li>
+    
+                <li class="dropdown notification-list " >
+                    <a class="nav-link dropdown-toggle waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        <i class="fe-bell noti-icon"></i>
+                        <span class="badge badge-danger rounded-circle noti-icon-badge">4</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+
+                        <!-- item-->
+                        <div class="dropdown-item noti-title">
+                            <h5 class="m-0">
+                                <span class="float-right">
+                                    <a href="" class="text-dark">
+                                        <small>Refresh</small>
+                                    </a>
+                                </span>Admin Group
+                            </h5>
+                        </div>
+
+                        <div class="slimscroll noti-scroll">
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item active">
+                                <div class="notify-icon">
+                                    <img src="assets/avatars/qz3.png" class="img-fluid rounded-circle" alt="" /> </div>
+                                <p class="notify-details">群主😎尤泇甯</p>
+                                <p class="text-muted mb-0 user-msg">
+                                    <small>Welcome~欢迎来到马来西亚Soul友💕</small>
+                                </p>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="notify-icon">
+                                    <img src="assets/avatars/wilson2.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                <p class="notify-details">管理员😎Wilson</p>
+                                <p class="text-muted mb-0 user-msg">
+                                    <small>Welcome~欢迎来到马来西亚Soul友💕</small>
+                                </p>
+                            </a>
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="notify-icon">
+                                    <img src="assets/avatars/cony.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                <p class="notify-details">管理员😎Cony</p>
+                                <p class="text-muted mb-0 user-msg">
+                                    <small>Welcome~欢迎来到马来西亚Soul友💕</small>
+                                </p>
+                            </a>
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="notify-icon">
+                                    <img src="assets/avatars/huf2.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                <p class="notify-details">管理员😎潜水看戏</p>
+                                <p class="text-muted mb-0 user-msg">
+                                    <small>Welcome~欢迎来到马来西亚Soul友💕</small>
+                                </p>
+                            </a>
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="notify-icon">
+                                    <img src="assets/avatars/kat1.png" class="img-fluid rounded-circle" alt="" /> </div>
+                                <p class="notify-details">kat  kat 管理员 ～KL</p>
+                                <p class="text-muted mb-0 user-msg">
+                                    <small>Welcome~欢迎来到马来西亚Soul友💕</small>
+                                </p>
+                            </a>
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="notify-icon">
+                                    <img src="assets/avatars/xyy.png" class="img-fluid rounded-circle" alt="" /> </div>
+                                <p class="notify-details">颖(✯⸜管理员  彭亨</p>
+                                <p class="text-muted mb-0 user-msg">
+                                    <small>Welcome~欢迎来到马来西亚Soul友💕</small>
+                                </p>
+                            </a>
+                
+                        </div>
+
+                        <!-- All-->
+                        <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                            End
+                            <i class="fi-arrow-right"></i>
+                        </a>
+
+                    </div>
+                </li>
+                <!--群规-->
+                <li class="dropdown notification-list " id="img1">
+                    <a href="javascript:void(0);" class="nav-link right-bar-toggle waves-effect" id="img2">
+                        <button id="img3" class="btn btn-outline-primary mb-2 mr-2" (click)="openScrollableContent(longContent)">
+                        <i class="fe-settings noti-icon">群规
+                            <ng-template #longContent let-modal>
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">群规💕</h4>
+                                        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                        <div class="modal-body">
+                                            欢迎加入我们的大家庭💕<br/><br/>
+
+                                            开这个群的意义是希望全部在Soul的马来西亚朋友，能认识全马各地的Soul友😎能一群人开心的互相交流聊天，分享快乐伤心️<br/><br/>
+                
+                                            为了群能一直长久下去，让大家有个开心的地方聊天🤗<br/><br/>
+                
+                                            所以希望大家能遵守群规哦<br/><br/>
+                
+                                            1.<br/>
+                                            我开这个群不是相亲群，请不要进来就乱加群里的人私聊，我觉得是骚扰会令人不舒服。<br/><br/>
+                
+                                            2.<br/>
+                                            如果要私聊请在大群征求对方同意。<br/><br/>
+                
+                                            3.<br/>
+                                            如果你们私底下私聊或约出去，发生什么不愉快的事，与本群无关。<br/><br/>
+                
+                                            4.<br/>
+                                            不要斗图，我不反对发表情包或图片，但请适可而止，因为会炸群，令其他人感觉信息快要炸了，会觉得厌烦，不能好好聊天。<br/><br/>
+                
+                                            5.<br/>
+                                            要退出请通知群主和三位管理员，因为没通知突然又失踪人口，群主会担心<br/>
+                                            还有不要一直潜水，我知道每个人都有忙的事，但是偶尔冒个泡和群友说早晚安💕这样群里的人就知道你的存在<br/><br/>
+                
+                                            6.<br/>
+                                            不要在群里卖广告，不要发过份的色情图片或表情包。<br/><br/>
+                
+                                            7.<br/>
+                                            我不反对群里老司机开车，但是开车也不要太露骨，会令其他群友不舒服。也不要在群里吵架。<br/><br/>
+                
+                                            8.<br/>
+                                            新人进群，请在名字后面加州或地方名。<br/><br/>
+                
+                                            9.<br/>
+                                            如果遇到关于群里的事，可以私聊群主和三位管理员<br/><br/>
+                
+                                            10.<br/>
+                                            要加人进群，可以通知群主和三位管理员，确认加入了会通知你。<br/><br/>
+                
+                                            希望大家会喜欢这个群，令大家有归属感️谢谢你们的加入<br/><br/>
+                
+                                            群主😎尤泇甯<br/>
+                
+                                            管理员😎Wilson<br/>
+                
+                                            管理员😎Cony<br/>
+                
+                                            管理员😎潜水看戏<br/>
+                                       </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+                                    </div>
+                                </ng-template>
+                        </i>
+                        </button>
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- LOGO -->
+            <div class="logo-box" id="img1">
+                <a routerLink="/Home" class="logo text-center">
+                    <span class="logo-lg" id="img2">
+                        <img src="assets/images/logo00.png" alt="" height="50" >
+                        <!-- <span class="logo-lg-text-light">UBold</span> -->
+                    </span>
+                    <span class="logo-sm" *ngIf="isCollapsed">
+                        <!-- <span class="logo-sm-text-dark">U</span> -->
+                        <img src="assets/images/logoM.png" alt="" height="28">
+                    </span>
+                </a>
+            </div>
+            <!--
+            <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+    
+                <li class="dropdown d-none d-lg-block">
+                    <a class="nav-link dropdown-toggle waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                         Test1
+                        <i class="mdi mdi-chevron-down"></i> 
+                    </a>
+                    <div class="dropdown-menu">
+                    <!--Dropdownlist
+                    </div>
+                </li>
+
+                <li class="dropdown dropdown-mega d-none d-lg-block">
+                    <a class="nav-link dropdown-toggle waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        Test2
+                        <i class="mdi mdi-chevron-down"></i> 
+                    </a>
+                    <div class="dropdown-menu dropdown-megamenu">
+                        <div class="row">
+                            <!--Dropdownlist
+                        </div>
+
+                    </div>
+                </li>
+            </ul>
+             -->
+        </div> <!-- end container-fluid-->
+    </div>
+    <!-- end Topbar -->
+
+    <div class="topbar-menu">
+        <div class="container-fluid">
+            <div id="navigation">
+                <!-- Navigation Menu-->
+                <ul class="navigation-menu">
+
+                    <li class="has-submenu">
+                        <a routerLink="/Home">
+                            <i class="fe-home"></i>Home</a>
+                    </li>
+                    <li class="has-submenu">
+                        <a style="color:rgba(255,255,255,.7);">
+                            <i class="fe-airplay"></i>Couple<div class="arrow-down"></div></a>
+                        <ul class="submenu">
+                            <li>
+                                <a routerLink="/Couple">List</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a style="color:rgba(255,255,255,.7);">
+                            <i class="fe-user-plus"></i>Single(available)<div class="arrow-down"></div></a>
+                            <ul class="submenu">
+                                <li>
+                                    <a href="javascript:void(0)">Male</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Female</a>
+                                </li>
+                            </ul>
+                    </li>            
+                    <li class="has-submenu">
+                        <a style="color:rgba(255,255,255,.7);">
+                            <i class="fe-image"></i>Gallery<div class="arrow-down"></div></a>
+                        <ul class="submenu">
+                            <li>
+                                <a routerLink="/Image">Image</a>
+                            </li>
+                            <li>
+                                <a routerLink="/Video">Video</a>
+                            </li>
+                        </ul>
+                    </li>            
+            
+                    <li class="has-submenu">
+                        <a href="javascript:void(0)">
+                            <i class="fe-help-circle"></i>About Us</a>
+                    </li>            
+
+                </ul>
+                <!-- End navigation menu -->
+
+                <div class="clearfix"></div>
+            </div>
+            <!-- end #navigation -->
+        </div>
+        <!-- end container -->
+    </div>
+    <!-- end navbar-custom -->
+
+</header>
+<!-- End Navigation Bar-->

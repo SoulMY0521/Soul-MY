@@ -1,0 +1,16 @@
+/* #img1{
+    background-color: yellow;
+}
+#img2{
+    background-color:orange;
+}
+#img3{
+    background-color:cyan;
+} */
+#navbar1{
+    z-index: 9999;
+}
+#Navbarr{
+    z-index: 9999;
+    position: absolute;
+}

@@ -1,0 +1,39 @@
+<div class="account-pages mt-5 mb-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6 col-xl-5">
+                <div class="card bg-pattern">
+
+                    <div class="card-body p-4">
+                        
+                        <div class="text-center w-75 m-auto">
+                            <a href="index.html">
+                                <span><img src="assets/images/logo-dark.png" alt="" height="120"></span>
+                            </a>
+                            <p class="text-muted mb-4 mt-3">Enter your secure password to access Soul-MY.</p>
+                        </div>
+
+                        <form action="#">
+
+                            <div class="form-group mb-3">
+                                <label for="password">Password</label>
+                                <input class="form-control" [(ngModel)]="Userpassword" [ngModelOptions]="{standalone: true}" type="password" required="" id="password" placeholder="Enter your password">
+                            </div>
+
+                            <div class="form-group mb-0 text-center">
+                                <button class="btn btn-primary btn-block" on-click="Show(Userpassword)" type="submit"> Log In </button>
+                            </div>
+
+                        </form>
+
+                    </div> <!-- end card-body -->
+                </div>
+                <!-- end card -->
+
+            </div> <!-- end col -->
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+</div>
+<!-- end page -->

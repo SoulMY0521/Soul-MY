@@ -1,8 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { CoupleComponent } from './couple/couple.component';
+import { VideoComponent } from './video/video.component';
+import { HomeComponent } from './home/home.component';
+import { ImageComponent } from './image/image.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', redirectTo: 'Home', pathMatch: 'full' },
+  { path: '#', redirectTo: 'Home', pathMatch: 'full' },
+  { path: 'Home', component: HomeComponent
+  //,canActivate:[AuthGuard] 
+  },
+  { path: 'Couple', component: CoupleComponent },
+  { path: 'Video', component: VideoComponent },
+  { path: 'Image', component: ImageComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
