@@ -18,4 +18,8 @@ export class TopbarComponent implements OnInit {
   openScrollableContent(longContent) {
     this.modalService.open(longContent, { scrollable: true });
   }
+  isCollapsed1 = true;
+  openScrollableContent1(longContent1) {
+    this.modalService.open(longContent1,  { centered: true,scrollable: true });
+  }
 }

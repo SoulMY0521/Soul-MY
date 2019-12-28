@@ -40,7 +40,7 @@
                                 </div>
                                 <p>
                                     <ngb-alert (close)="SHOW1='false'" *ngIf="SHOW1=='true'">
-                                            <h3><strong>Welcome!</strong> 欢迎来道马来西亚Soul友。</h3>
+                                            <h3><strong>Welcome!</strong> 欢迎来道马来西亚Soul友 & MY有趣Soul友。</h3>
                                     </ngb-alert>
                                 </p>
                                 <h4 class="d-flex justify-content-center"><b>Countdown to New Year 2020</b></h4>
@@ -83,6 +83,14 @@
                                             <source src="assets\video\xcc1.mp4" type="video/mp4">
                                             Your browser does not support HTML5 video.
                                     </video>
+                                    <video width="200" height="352.94px" controls>
+                                            <source src="assets\video\空空sing.mp4" type="video/mp4">
+                                            Your browser does not support HTML5 video.
+                                    </video>
+                                    <video width="200" controls>
+                                            <source src="assets\video\wwdd.mp4" type="video/mp4">
+                                            Your browser does not support HTML5 video.
+                                    </video>
                                 </div>
                             </div>
                         </div>
@@ -111,7 +119,7 @@
                         <div class="page-title-box">
                             <!--<h4 class="page-title">Dashboard(最后更新:2019年10月20日)</h4>-->
                             <h4 class="page-title">Dashboard</h4>
-                            <h6>(最后更新:2019年11月25日)</h6>
+                            <h6>(最后更新:2019年12月31日)</h6>
                         </div>
                     </div>
                 </div>     
@@ -128,7 +136,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="text-right">
-                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">{{Total}}</span></h3>
+                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">{{OldSoul + NewSoul - Admin + 1}}</span></h3>
                                         <p class="text-muted mb-1 text-truncate">Total Souler</p>
                                     </div>
                                 </div>
@@ -164,8 +172,26 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="text-right">
-                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">{{Total-Admin}}</span></h3>
-                                        <p class="text-muted mb-1 text-truncate">Souler</p>
+                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">{{OldSoul-Admin +1}}</span></h3>
+                                        <p class="text-muted mb-1 text-truncate">马来西亚Soul友</p>
+                                    </div>
+                                </div>
+                            </div> <!-- end row-->	
+                        </div> <!-- end widget-rounded-circle-->	
+                    </div> <!-- end col-->	
+
+                    <div class="col-md-6 col-xl-3">
+                        <div class="widget-rounded-circle card-box">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="avatar-lg rounded-circle shadow-lg bg-warning border-warning border">
+                                        <i class="fa fa-users font-22 avatar-title text-white"></i>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-right">
+                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">{{NewSoul-Admin}}</span></h3>
+                                        <p class="text-muted mb-1 text-truncate">MY有趣Soul友</p>
                                     </div>
                                 </div>
                             </div> <!-- end row-->	
@@ -264,7 +290,7 @@
                                         <p class="text-muted mb-1 text-truncate">Admin</p>
                                     </div>
                                 </div>
-                                <p>潜水·等待·管理员砂捞越</p>
+                                <p>小潜水2020·管理员·沙捞越</p>
                             </div> <!-- end row-->
                         </div> <!-- end widget-rounded-circle-->
                     </div> <!-- end col-->				
@@ -304,6 +330,24 @@
                             </div> <!-- end row-->
                         </div> <!-- end widget-rounded-circle-->
                     </div> <!-- end col-->				
+                    <div class="col-md-6 col-xl-3">
+                        <div class="widget-rounded-circle card-box">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="avatar-lg rounded-circle shadow-lg bg-success border-success border">
+                                            <img src="assets/avatars/lla.jpg" alt="" height="70"  style="border-radius: 50%;" >
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-right">
+                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">7</span></h3>
+                                        <p class="text-muted mb-1 text-truncate">Admin</p>
+                                    </div>
+                                </div>
+                                <p>莉莉安💞  管理员 Cheras</p>
+                            </div> <!-- end row-->
+                        </div> <!-- end widget-rounded-circle-->
+                    </div> <!-- end col-->				
                 </div>
                     
 				<!--Souler----------------------------------->
@@ -323,27 +367,71 @@
                             -->
                         </div>
                     </div>
-                </div> 
-				<div class="row" *ngIf="UnlockedO==true">
-					<div class="col-md-6 col-xl-3" *ngFor="let soulers of Soulers">
-                        <div class="widget-rounded-circle card-box">
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="avatar-lg rounded-circle shadow-lg bg-warning border-warning border">
-                                        <img src="assets/avatars/{{soulers.Img}}" alt="" height="70"  style="border-radius: 50%;" >
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="text-right">
-                                        <h3 class="text-dark mt-1"><span data-plugin="counterup"></span></h3>
-                                        <p class="text-muted mb-1 text-truncate">Souler</p>
-                                    </div>
-                                </div>
-								<p>{{soulers.Name}}</p>
-                            </div> <!-- end row-->	
-                        </div> <!-- end widget-rounded-circle-->	
-                    </div> <!-- end col-->											
                 </div>
+                <div class="col-xl-12">
+                    
+
+                        <ul class="nav nav-pills navtab-bg nav-justified">
+                            <li class="nav-item">
+                                <a href="#old" data-toggle="tab" aria-expanded="false" class="nav-link active">
+                                    马来西亚Soul友
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#new" data-toggle="tab" aria-expanded="true" class="nav-link ">
+                                    MY有趣Soul友
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane show active" id="old">
+                                <div class="row" *ngIf="UnlockedO==true">
+                                    <div class="col-md-6 col-xl-3" *ngFor="let soulers of Soulers">
+                                        <div class="widget-rounded-circle card-box">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="avatar-lg rounded-circle shadow-lg bg-warning border-warning border">
+                                                        <img src="assets/avatars/{{soulers.Img}}" alt="" height="70"  style="border-radius: 50%;" >
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="text-right">
+                                                        <h3 class="text-dark mt-1"><span data-plugin="counterup"></span></h3>
+                                                        <p class="text-muted mb-1 text-truncate">Souler</p>
+                                                    </div>
+                                                </div>
+                                                <p>{{soulers.Name}}</p>
+                                            </div> <!-- end row-->	
+                                        </div> <!-- end widget-rounded-circle-->	
+                                    </div> <!-- end col-->											
+                                </div>
+                            </div>
+                            <div class="tab-pane " id="new">
+                                <div class="row" *ngIf="Unlocked1==true">
+                                    <div class="col-md-6 col-xl-3" *ngFor="let soulers of SoulersN">
+                                        <div class="widget-rounded-circle card-box">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="avatar-lg rounded-circle shadow-lg bg-warning border-warning border">
+                                                        <img src="assets/avatars/{{soulers.Img}}" alt="" height="70"  style="border-radius: 50%;" >
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="text-right">
+                                                        <h3 class="text-dark mt-1"><span data-plugin="counterup"></span></h3>
+                                                        <p class="text-muted mb-1 text-truncate">Souler</p>
+                                                    </div>
+                                                </div>
+                                                <p>{{soulers.Name}}</p>
+                                            </div> <!-- end row-->	
+                                        </div> <!-- end widget-rounded-circle-->	
+                                    </div> <!-- end col-->											
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div> 
+
                 <!--For Admin--------------->
                 <div class="row" *ngIf="UnlockedA=='unlock'">
                         <div class="col-md-6 col-xl-3" *ngFor="let soulers of Soulers">
@@ -434,6 +522,39 @@
             </div> <!-- end container -->
         </div>
         <!-- end wrapper -->
+
+        <!--Toast Birthday Soul-MY-->
+        <div class="d-flex justify-content-end mb-3" style="position: fixed;
+        top: 0;
+        right: 0;
+        margin: .5em;
+        z-index: 1200;">
+        <ngb-toast *ngIf="Birthday1" header="Click my close icon →" [autohide]="false"
+        (hide)="close1()">
+            <ng-template ngbToastHeader>
+                <i class="fa fa-birthday-cake"></i>
+                <strong class="mx-1">Happy Birthday Oh !~</strong>
+            </ng-template>
+            {{BirthdayName1}}, 祝您生日快乐喔。Happy Birthday To U ~ お诞生日おめでとうございます。
+            <img  src="assets\images\Birthday.png" width=100%>
+            </ngb-toast>
+        </div>
+        <!--Toast Test -->
+        <div class="d-flex justify-content-end mb-3" style="position: fixed;
+        top: 65px;
+        right: 0;
+        margin: .5em;
+        z-index: 1200;">
+        <ngb-toast *ngIf="HNY2020" header="Click my close icon →" [autohide]="false"
+        (hide)="closeHNY2020()">
+            <ng-template ngbToastHeader>
+                <img  src="assets\images\2020.jpg" height='50'>
+                <strong class="mx-1">Happy New Year 2020!~</strong>
+            </ng-template>
+            <img  src="assets\images\2020w.jpg" width=100%>
+            <h6>开群天数: 225 天</h6>
+            </ngb-toast>
+        </div>        
 
         <!-- ============================================================== -->
         <!-- End Page content -->

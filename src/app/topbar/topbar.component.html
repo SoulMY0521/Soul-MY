@@ -25,8 +25,9 @@
                             </div>
                         </div>
                         -->
+                        <!--
                         <div class="col">
-                            <div ngbDropdown class="d-inline-block">
+                            <div ngbDropdown class="d-inline-block" >
                                 <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>&#9776;</button>
                                 <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
                                 <button ngbDropdownItem routerLink="/Home">Home</button>
@@ -35,9 +36,62 @@
                                 <button ngbDropdownItem routerLink="/Image">Image</button>
                                 <button ngbDropdownItem routerLink="/Video">Video</button>
                                 <button ngbDropdownItem routerLink="#" disabled>About Us</button>
+                                <button ngbDropdownItem routerLink="#" disabled>匿名留言区</button>
                                 </div>
                             </div>
                         </div>
+                        -->
+                        <button id="img3" class="btn btn-outline-primary mb-2 mr-2" (click)="openScrollableContent1(longContent1)">&#9776;</button>
+                        <ng-template #longContent1 let-modal>
+                            <div class="modal-header">
+                                <h4 class="modal-title">Menu</h4>
+                                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                                <div class="modal-body " id="accordion">
+                                    <div class="row" style="margin-bottom: 3px;">
+                                    <button type="button" class="btn btn-block btn-sm btn-dark waves-effect waves-light" (click)="modal.close()"><a routerLink="/Home" style="color:rgba(255,255,255,.7);">
+                                        <i class="fe-home"></i>Home</a></button>
+                                    </div>    
+                                    <div class="row" style="margin-bottom: 3px;">
+                                    <button type="button" class="btn btn-block btn-sm btn-dark waves-effect waves-light" (click)="modal.close()"><a routerLink="/Couple" style="color:rgba(255,255,255,.7);">
+                                        <i class="fe-airplay"></i>Couple</a></button>
+                                    </div>  
+                                    <!--  
+                                    <div class="row" style="margin-bottom: 3px;">
+                                    <button type="button" class="btn btn-block btn-sm btn-dark waves-effect waves-light"><a href="javascript:void(0)" style="color:rgba(255,255,255,.7);">
+                                        <i class="fe-airplay"></i>Single(available)</a></button>
+                                    </div>   --> 
+                                    <div class="row" style="margin-bottom: 3px;" id="headingOne">
+                                    <button type="button" class="btn btn-block btn-md btn-dark waves-effect waves-light collapsed" data-toggle="collapse" href="#collapseOne" aria-expanded="false"><a href="javascript:void(0)" style="color:rgba(255,255,255,.7);">
+                                        <i class="fe-user-plus"></i>Single(available)<div class="arrow-down"></div></a></button>
+                                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion" style="margin: auto;">
+                                                <button type="button" class="btn btn-block btn-sm btn-dark btn-rounded waves-effect waves-light" style="margin-top: 2px;" (click)="modal.close()"><a routerLink="/Male" style="color:rgba(255,255,255,.7);">Male</a></button>
+                                                <button type="button" class="btn btn-block btn-sm btn-dark btn-rounded waves-effect waves-light" (click)="modal.close()"><a routerLink="/Female" style="color:rgba(255,255,255,.7);">Female</a></button>
+                                            </div>
+                                    </div>    
+                                    <div class="row" style="margin-bottom: 3px;" id="heading2">
+                                    <button type="button" class="btn btn-block btn-md btn-dark waves-effect waves-light collapsed" data-toggle="collapse" href="#collapse2" aria-expanded="false"><a href="javascript:void(0)" style="color:rgba(255,255,255,.7);">
+                                        <i class="fe-image"></i>Gallery<div class="arrow-down"></div></a></button>
+                                        <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordion" style="margin: auto;">
+                                                <button type="button" class="btn btn-block btn-sm btn-dark btn-rounded waves-effect waves-light" style="margin-top: 2px;" (click)="modal.close()"><a routerLink="/Image" style="color:rgba(255,255,255,.7);">照片</a></button>
+                                                <button type="button" class="btn btn-block btn-sm btn-dark btn-rounded waves-effect waves-light" (click)="modal.close()"><a routerLink="/Video" style="color:rgba(255,255,255,.7);">视频</a></button>
+                                            </div>
+                                    </div>    
+                                    <div class="row" style="margin-bottom: 3px;">
+                                    <button type="button" class="btn btn-block btn-sm btn-dark waves-effect waves-light" (click)="modal.close()"><a routerLink="/Comment" style="color:rgba(255,255,255,.7);">
+                                        <i class="fe-clipboard"></i>匿名留言区</a></button>
+                                    </div>    
+                                    <div class="row" style="margin-bottom: 3px;">
+                                    <button type="button" class="btn btn-block btn-sm btn-dark waves-effect waves-light" (click)="modal.close()"><a routerLink="/AboutUs" style="color:rgba(255,255,255,.7);">
+                                        <i class="fe-help-circle"></i>关于我们</a></button>
+                                    </div>      
+                               </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+                            </div>
+                        </ng-template>
                     </a>
                     <!-- End mobile menu toggle-->
                 </li>
@@ -60,7 +114,8 @@
                 <li class="dropdown notification-list " >
                     <a class="nav-link dropdown-toggle waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                         <i class="fe-bell noti-icon"></i>
-                        <span class="badge badge-danger rounded-circle noti-icon-badge">4</span>
+                        <!--Notification Number-->
+                        <span class="badge badge-danger rounded-circle noti-icon-badge">7</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-lg">
 
@@ -82,9 +137,11 @@
                                 <div class="notify-icon">
                                     <img src="assets/avatars/qz3.png" class="img-fluid rounded-circle" alt="" /> </div>
                                 <p class="notify-details">群主😎尤泇甯</p>
+                                <!--
                                 <p class="text-muted mb-0 user-msg">
                                     <small>Welcome~欢迎来到马来西亚Soul友💕</small>
                                 </p>
+                                -->
                             </a>
 
                             <!-- item-->
@@ -92,45 +149,42 @@
                                 <div class="notify-icon">
                                     <img src="assets/avatars/wilson2.jpg" class="img-fluid rounded-circle" alt="" /> </div>
                                 <p class="notify-details">管理员😎Wilson</p>
-                                <p class="text-muted mb-0 user-msg">
-                                    <small>Welcome~欢迎来到马来西亚Soul友💕</small>
-                                </p>
+                               
                             </a>
                             <!-- item-->
                             <a href="javascript:void(0);" class="dropdown-item notify-item">
                                 <div class="notify-icon">
                                     <img src="assets/avatars/cony.jpg" class="img-fluid rounded-circle" alt="" /> </div>
                                 <p class="notify-details">管理员😎Cony</p>
-                                <p class="text-muted mb-0 user-msg">
-                                    <small>Welcome~欢迎来到马来西亚Soul友💕</small>
-                                </p>
+                               
                             </a>
                             <!-- item-->
                             <a href="javascript:void(0);" class="dropdown-item notify-item">
                                 <div class="notify-icon">
                                     <img src="assets/avatars/huf2.jpg" class="img-fluid rounded-circle" alt="" /> </div>
                                 <p class="notify-details">管理员😎潜水看戏</p>
-                                <p class="text-muted mb-0 user-msg">
-                                    <small>Welcome~欢迎来到马来西亚Soul友💕</small>
-                                </p>
+                             
                             </a>
                             <!-- item-->
                             <a href="javascript:void(0);" class="dropdown-item notify-item">
                                 <div class="notify-icon">
                                     <img src="assets/avatars/kat1.png" class="img-fluid rounded-circle" alt="" /> </div>
-                                <p class="notify-details">kat  kat 管理员 ～KL</p>
-                                <p class="text-muted mb-0 user-msg">
-                                    <small>Welcome~欢迎来到马来西亚Soul友💕</small>
-                                </p>
+                                <p class="notify-details">管理员😎Katrina</p>
+                               
                             </a>
                             <!-- item-->
                             <a href="javascript:void(0);" class="dropdown-item notify-item">
                                 <div class="notify-icon">
                                     <img src="assets/avatars/xyy.png" class="img-fluid rounded-circle" alt="" /> </div>
-                                <p class="notify-details">颖(✯⸜管理员  彭亨</p>
-                                <p class="text-muted mb-0 user-msg">
-                                    <small>Welcome~欢迎来到马来西亚Soul友💕</small>
-                                </p>
+                                <p class="notify-details">管理员😎颖颖</p>
+                            
+                            </a>
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="notify-icon">
+                                    <img src="assets/avatars/lla.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                <p class="notify-details">管理员😎Lilian</p>
+                            
                             </a>
                 
                         </div>
@@ -190,7 +244,7 @@
                                             新人进群，请在名字后面加州或地方名。<br/><br/>
                 
                                             9.<br/>
-                                            如果遇到关于群里的事，可以私聊群主和三位管理员<br/><br/>
+                                            如果遇到关于群里的事，可以私聊群主和五位管理员<br/><br/>
                 
                                             10.<br/>
                                             要加人进群，可以通知群主和三位管理员，确认加入了会通知你。<br/><br/>
@@ -204,6 +258,20 @@
                                             管理员😎Cony<br/>
                 
                                             管理员😎潜水看戏<br/>
+
+                                            管理员😎Katrina<br/>
+
+                                            管理员😎颖颖<br/>
+
+                                            管理员😎Lilian<br/>
+                                            
+                                            <hr/>
+                                            TO：新人<br/>
+                                            我們要收集大家在soul的頭像做屬於群的網頁<br/>
+                                            請大家大方秀出你們的頭像哦 <br/>
+                                            謝謝<br/>
+                                            网页：<br/>
+                                            <a href="https://soulmy0521.github.io/Soul-MY/Home">https://soulmy0521.github.io/Soul-MY/Home</a><br/>
                                        </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
@@ -296,18 +364,23 @@
                             <i class="fe-image"></i>Gallery<div class="arrow-down"></div></a>
                         <ul class="submenu">
                             <li>
-                                <a routerLink="/Image">Image</a>
+                                <a routerLink="/Image">照片</a>
                             </li>
                             <li>
-                                <a routerLink="/Video">Video</a>
+                                <a routerLink="/Video">视频</a>
                             </li>
                         </ul>
                     </li>            
             
                     <li class="has-submenu">
-                        <a href="javascript:void(0)">
-                            <i class="fe-help-circle"></i>About Us</a>
-                    </li>            
+                        <a routerLink="/Comment">
+                            <i class="fe-clipboard"></i>匿名留言区</a>
+                    </li>       
+
+                    <li class="has-submenu">
+                        <a routerLink="/AboutUs">
+                            <i class="fe-help-circle"></i>关于我们</a>
+                    </li>      
 
                 </ul>
                 <!-- End navigation menu -->

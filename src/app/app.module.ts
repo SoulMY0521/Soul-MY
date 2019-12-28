@@ -14,6 +14,8 @@ import { CoupleComponent } from './couple/couple.component';
 import { VideoComponent } from './video/video.component';
 import { FooterComponent } from './footer/footer.component';
 import { ImageComponent } from './image/image.component';
+import { CommentComponent } from './comment/comment.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ImageComponent } from './image/image.component';
     CoupleComponent,
     VideoComponent,
     FooterComponent,
-    ImageComponent
+    ImageComponent,
+    CommentComponent,
+    AboutusComponent
   ],
   imports: [
     BrowserModule,

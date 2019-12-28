@@ -3,20 +3,20 @@
 <!--End Top bar-->
 <div class="wrapper">
     <div class="container-fluid"> 
-            <!-- Notification -->
-            <div class="row">
-                <h3>精彩视频</h3>
-                <div class="input-group">
-                    <input type="text" [(ngModel)]="password" class="form-control" placeholder="Enter hidden password" aria-label="Enter hidden password">
-                    <div class="input-group-append">
-                        <button (click)="Unlock(password)" class="btn btn-dark waves-effect waves-light" type="button">Unlock</button>
-                    </div>
+        <!-- Notification -->
+        <div class="row">
+            <h3>精彩视频</h3>
+            <div class="input-group">
+                <input type="text" [(ngModel)]="password" class="form-control" placeholder="Enter hidden password" aria-label="Enter hidden password">
+                <div class="input-group-append">
+                    <button (click)="Unlock(password)" class="btn btn-dark waves-effect waves-light" type="button">Unlock</button>
                 </div>
             </div>
         </div>
+    </div>
     <div class="container-fluid" *ngIf="Unlocked=='unlock'"> 
         <!-- Notification -->
-        <div class="row"><br/>
+        <div class="row d-flex justify-content-center"><br/>
             <video width="250" controls>
                 <source src="assets\video\ddg1.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
@@ -29,6 +29,14 @@
             &nbsp;
             <video width="250" controls>
                     <source src="assets\video\xcc1.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+            </video>
+            <video width="250" height="441.17px" controls>
+                <source src="assets\video\空空sing.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <video width="250" controls>
+                    <source src="assets\video\wwdd.mp4" type="video/mp4">
                     Your browser does not support HTML5 video.
             </video>
         </div>
