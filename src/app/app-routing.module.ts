@@ -7,6 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { ImageComponent } from './image/image.component';
 import { CommentComponent } from './comment/comment.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { MaleComponent } from './male/male.component';
+import { FemaleComponent } from './female/female.component';
 
 
 const routes: Routes = [
@@ -17,6 +19,8 @@ const routes: Routes = [
   },
   { path: 'Couple', component: CoupleComponent },
   { path: 'Video', component: VideoComponent },
+  { path: 'Male', component: MaleComponent },
+  { path: 'Female', component: FemaleComponent },
   { path: 'Image', component: ImageComponent },
   { path: 'Comment', component: CommentComponent },
   { path: 'AboutUs', component: AboutusComponent },

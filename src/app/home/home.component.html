@@ -43,7 +43,7 @@
                                             <h3><strong>Welcome!</strong> 欢迎来道马来西亚Soul友 & MY有趣Soul友。</h3>
                                     </ngb-alert>
                                 </p>
-                                <h4 class="d-flex justify-content-center"><b>Countdown to New Year 2020</b></h4>
+                                <h4 class="d-flex justify-content-center"><b>Countdown to New Year 2021</b></h4>
                                 <iframe src="https://soulmy0521.github.io/CountDown/" 	
                                 height=80px width=100% style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media">
                                   <p>Your browser does not support iframes.</p>
@@ -58,6 +58,10 @@
                             <button type="button" class="btn btn-outline-primary" (click)="isCollapsedVideo = !isCollapsedVideo"
                                     [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample" ngbPopover="点击观看精彩视频！" triggers="mouseenter:mouseleave">
                                 置顶视频
+                            </button>&nbsp;
+                            <button type="button" class="btn btn-outline-danger" (click)="isCollapsedVideo1 = !isCollapsedVideo1"
+                                    [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample1" ngbPopover="点击观看！" triggers="mouseenter:mouseleave">
+                                正确佩戴/摘掉口罩😷方式
                             </button>
                         </p>
                     </div>
@@ -95,6 +99,22 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-12">
+                        <div id="collapseExample1" [ngbCollapse]="isCollapsedVideo1">
+                            <div class="card">
+                                <div class="card-body">
+                                    <video width="200" height="352.94px" controls>
+                                        <source src="assets\video\带口罩.mp4" type="video/mp4">
+                                        Your browser does not support HTML5 video.
+                                    </video> &nbsp;
+                                    <video width="200" height="352.94px" controls>
+                                        <source src="assets\video\脱口罩.mp4" type="video/mp4">
+                                        Your browser does not support HTML5 <video src="" class=""></video>
+                                    </video> &nbsp;
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!--EnD置顶视频-->
 
@@ -117,9 +137,9 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box">
-                            <!--<h4 class="page-title">Dashboard(最后更新:2019年10月20日)</h4>-->
+                            <!--<h4 class="page-title">Dashboard(最后更新:2019年10月20日,2019年12月31日)</h4>-->
                             <h4 class="page-title">Dashboard</h4>
-                            <h6>(最后更新:2019年12月31日)</h6>
+                            <h6>(最后更新:2020年1月28日)</h6>
                         </div>
                     </div>
                 </div>     
@@ -136,7 +156,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="text-right">
-                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">{{OldSoul + NewSoul - Admin + 1}}</span></h3>
+                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">{{ NewSoul }}</span></h3>
                                         <p class="text-muted mb-1 text-truncate">Total Souler</p>
                                     </div>
                                 </div>
@@ -172,7 +192,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="text-right">
-                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">{{OldSoul-Admin +1}}</span></h3>
+                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">Closed</span></h3>
                                         <p class="text-muted mb-1 text-truncate">马来西亚Soul友</p>
                                     </div>
                                 </div>
@@ -197,16 +217,7 @@
                             </div> <!-- end row-->	
                         </div> <!-- end widget-rounded-circle-->	
                     </div> <!-- end col-->	
-					<!--						
-                    <div class="col-md-6 col-xl-3" style="position:absolute;">
-                        <div class="widget-rounded-circle card-box">
-                            <div class="row">
-								<div id="container1" style="float:none;margin: 0px auto; float:right;"></div>
-                            </div> <!-- end row
-                        </div> <!-- end widget-rounded-circle
-                    </div> <!-- end col-->
-			
-					
+							
 						
                 </div>
                 <!-- end row-->   
@@ -219,136 +230,28 @@
                         </div>
                     </div>
                 </div>
-				
-                <div class="row">
-                    <div class="col-md-6 col-xl-3">
+				<!--Admin------------>
+                <div class="row" >
+                    <div class="col-md-6 col-xl-3" *ngFor="let admin of admins">
                         <div class="widget-rounded-circle card-box">
                             <div class="row">
                                 <div class="col-6">
                                     <div class="avatar-lg rounded-circle shadow-lg bg-success border-success border">
-                                            <img src="assets/avatars/qz3.png" alt="" height="70"  style="border-radius: 50%;" >
+                                            <img src="assets/avatars/{{admin.Img}}" alt="" height="70"  style="border-radius: 50%;" >
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="text-right">
-                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">1</span></h3>
-                                        <p class="text-muted mb-1 text-truncate">Admin</p>
+                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">{{admin.Id}}</span></h3>
+                                        <p class="text-muted mb-1 text-truncate">{{admin.Title}}</p>
                                     </div>
                                 </div>
-								<p>群主很忙Klang</p>
+								<p>{{admin.Name}}</p>
                             </div> <!-- end row-->
                         </div> <!-- end widget-rounded-circle-->
-                    </div> <!-- end col-->	                    
-					<div class="col-md-6 col-xl-3">
-                        <div class="widget-rounded-circle card-box">
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="avatar-lg rounded-circle shadow-lg bg-success border-success border">
-                                        <!--<i class="	fa fa-user font-22 avatar-title text-white"></i>-->
-										 <img src="assets/avatars/wilson2.jpg" alt="" height="70"  style="border-radius: 50%;">
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="text-right">
-                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">2</span></h3>
-                                        <p class="text-muted mb-1 text-truncate">Admin</p>
-                                    </div>
-                                </div>
-								<p>Wil求包养 管理员_JB miss u</p>
-                            </div> <!-- end row-->
-                        </div> <!-- end widget-rounded-circle-->
-                    </div> <!-- end col-->	                    
-					<div class="col-md-6 col-xl-3">
-                        <div class="widget-rounded-circle card-box">
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="avatar-lg rounded-circle shadow-lg bg-success border-success border">
-                                            <img src="assets/avatars/cony.jpg" alt="" height="70"  style="border-radius: 50%;">
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="text-right">
-                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">3</span></h3>
-                                        <p class="text-muted mb-1 text-truncate">Admin</p>
-                                    </div>
-                                </div>
-								<p>管coni管理员想你了Sarawak</p>
-                            </div> <!-- end row-->
-                        </div> <!-- end widget-rounded-circle-->
-                    </div> <!-- end col-->	     
-                    <div class="col-md-6 col-xl-3">
-                        <div class="widget-rounded-circle card-box">
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="avatar-lg rounded-circle shadow-lg bg-success border-success border">
-                                            <img src="assets/avatars/huf2.jpg" alt="" height="70"  style="border-radius: 50%;" >
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="text-right">
-                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">4</span></h3>
-                                        <p class="text-muted mb-1 text-truncate">Admin</p>
-                                    </div>
-                                </div>
-                                <p>小潜水2020·管理员·沙捞越</p>
-                            </div> <!-- end row-->
-                        </div> <!-- end widget-rounded-circle-->
-                    </div> <!-- end col-->				
-                    <div class="col-md-6 col-xl-3">
-                        <div class="widget-rounded-circle card-box">
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="avatar-lg rounded-circle shadow-lg bg-success border-success border">
-                                            <img src="assets/avatars/kat1.png" alt="" height="70"  style="border-radius: 50%;" >
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="text-right">
-                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">5</span></h3>
-                                        <p class="text-muted mb-1 text-truncate">Admin</p>
-                                    </div>
-                                </div>
-                                <p>kat  kat 管理员 ～KL</p>
-                            </div> <!-- end row-->
-                        </div> <!-- end widget-rounded-circle-->
-                    </div> <!-- end col-->				
-                    <div class="col-md-6 col-xl-3">
-                        <div class="widget-rounded-circle card-box">
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="avatar-lg rounded-circle shadow-lg bg-success border-success border">
-                                            <img src="assets/avatars/xyy.png" alt="" height="70"  style="border-radius: 50%;" >
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="text-right">
-                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">6</span></h3>
-                                        <p class="text-muted mb-1 text-truncate">Admin</p>
-                                    </div>
-                                </div>
-                                <p>颖(✯⸜管理员  彭亨</p>
-                            </div> <!-- end row-->
-                        </div> <!-- end widget-rounded-circle-->
-                    </div> <!-- end col-->				
-                    <div class="col-md-6 col-xl-3">
-                        <div class="widget-rounded-circle card-box">
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="avatar-lg rounded-circle shadow-lg bg-success border-success border">
-                                            <img src="assets/avatars/lla.jpg" alt="" height="70"  style="border-radius: 50%;" >
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="text-right">
-                                        <h3 class="text-dark mt-1"><span data-plugin="counterup">7</span></h3>
-                                        <p class="text-muted mb-1 text-truncate">Admin</p>
-                                    </div>
-                                </div>
-                                <p>莉莉安💞  管理员 Cheras</p>
-                            </div> <!-- end row-->
-                        </div> <!-- end widget-rounded-circle-->
-                    </div> <!-- end col-->				
+                    </div> <!-- end col-->	          			
                 </div>
+                <!--End of Admin------------->
                     
 				<!--Souler----------------------------------->
 				<div class="row">
@@ -373,18 +276,19 @@
 
                         <ul class="nav nav-pills navtab-bg nav-justified">
                             <li class="nav-item">
-                                <a href="#old" data-toggle="tab" aria-expanded="false" class="nav-link active">
-                                    马来西亚Soul友
+                                <a href="#new" data-toggle="tab" aria-expanded="true" class="nav-link active">
+                                    MY有趣Soul友
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#new" data-toggle="tab" aria-expanded="true" class="nav-link ">
-                                    MY有趣Soul友
+                                <a href="#old" data-toggle="tab" aria-expanded="false" class="nav-link ">
+                                    马来西亚Soul友(Closed)
                                 </a>
                             </li>
                         </ul>
                         <div class="tab-content">
-                            <div class="tab-pane show active" id="old">
+                            <!-- 马来西亚Soul友 Closed 12.1.2020-->
+                            <div class="tab-pane " id="old">
                                 <div class="row" *ngIf="UnlockedO==true">
                                     <div class="col-md-6 col-xl-3" *ngFor="let soulers of Soulers">
                                         <div class="widget-rounded-circle card-box">
@@ -406,7 +310,8 @@
                                     </div> <!-- end col-->											
                                 </div>
                             </div>
-                            <div class="tab-pane " id="new">
+                            <!-- MY有趣Soul友-->	
+                            <div class="tab-pane show active" id="new">
                                 <div class="row" *ngIf="Unlocked1==true">
                                     <div class="col-md-6 col-xl-3" *ngFor="let soulers of SoulersN">
                                         <div class="widget-rounded-circle card-box">
@@ -553,6 +458,15 @@
             </ng-template>
             <img  src="assets\images\2020w.jpg" width=100%>
             <h6>开群天数: 225 天</h6>
+            </ngb-toast>
+        <ngb-toast *ngIf="WUHANJIAYOU2020" header="Click my close icon →" [autohide]="false"
+        (hide)="closeWUHANJIAYOU2020()">
+            <ng-template ngbToastHeader>
+                <img  src="assets\images\pray.jpg" height='30'>
+                <strong class="mx-1">WU HAN JIA YOU 武汉加油!~</strong>
+            </ng-template>
+            <img  src="assets\images\wuhanjiayou.jpg" width=100%>
+            <h6>武汉加油！~</h6>
             </ngb-toast>
         </div>        
 

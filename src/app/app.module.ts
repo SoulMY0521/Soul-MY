@@ -16,6 +16,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ImageComponent } from './image/image.component';
 import { CommentComponent } from './comment/comment.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { MaleComponent } from './male/male.component';
+import { FemaleComponent } from './female/female.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { AboutusComponent } from './aboutus/aboutus.component';
     FooterComponent,
     ImageComponent,
     CommentComponent,
-    AboutusComponent
+    AboutusComponent,
+    MaleComponent,
+    FemaleComponent
   ],
   imports: [
     BrowserModule,

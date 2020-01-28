@@ -45,6 +45,11 @@ export class HomeComponent implements OnInit {
       this.HNY2020=true;
       //window.alert("Hello2");
     }
+    //WU HAN JIA YOU 2020
+    else if(this.diffInDays != 0){
+      this.WUHANJIAYOU2020=true;
+      //window.alert("Hello2");
+    }
     else if(this.diffInDays% 365 == 0){
       this.Birthday1 = true;
       //window.alert("Hello187");
@@ -56,6 +61,12 @@ export class HomeComponent implements OnInit {
   HNY2020=false;
   closeHNY2020() {
     this.HNY2020 = false;
+    //setTimeout(() => this.show = false, 5000);
+    } 
+  //WUHANJIAYOU2020
+  WUHANJIAYOU2020=false;
+  closeWUHANJIAYOU2020() {
+    this.WUHANJIAYOU2020 = false;
     //setTimeout(() => this.show = false, 5000);
     } 
   //Birthday Section
@@ -74,9 +85,12 @@ export class HomeComponent implements OnInit {
   day1 = this.month0.getDate();
 
   public isCollapsedVideo = true;
+  public isCollapsedVideo1 = true;
 
   Soulers=[
-    {Name:'RaYLoH kl',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'Closed',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    /*
+    //{Name:'RaYLoH kl',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     //{Name:'Capriio18 kl',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     //{Name:'Junwei PP',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'小翼 kl彩妆师',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
@@ -95,7 +109,7 @@ export class HomeComponent implements OnInit {
     //{Name:'猫爷🦁槟城',Img:'my.jpg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     //{Name:'yf_____baci KL',Img:'yf2.png',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     //{Name:'kat kat 夜猫子🦉～KL',Img:'kat1.png',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'}, 
-    {Name:'haha 雪州',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    //{Name:'haha 雪州',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'天使の微笑Sarawak',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'hui__PG',Img:'hui.jpg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     //{Name:'🥀¢уитнια🖤 KL',Img:'cyn.jpg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
@@ -163,15 +177,30 @@ export class HomeComponent implements OnInit {
     {Name:'Amy liew kl',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'凌枫  雪兰莪',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'Aaronhtf KL',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
-    ]
+    */
+  ]
+
+  admins=
+  [
+    {Img:'qz3.png',Id:1,Title:'Admin',Name:'群主很忙Klang'},
+    {Img:'wilson2.jpg',Id:2,Title:'Admin',Name:'Wil求包养 管理员_JB miss u'},
+    {Img:'cony.jpg',Id:3,Title:'Admin',Name:'管coni管理员想你了Sarawak'},
+    {Img:'huf2.jpg',Id:4,Title:'Admin',Name:'小潜水2020·管理员·沙捞越'},
+    {Img:'kat1.png',Id:5,Title:'Admin',Name:'kat  kat 管理员 ～KL'},
+    {Img:'xyy.png',Id:6,Title:'Admin',Name:'颖(✯⸜管理员  彭亨'},
+    {Img:'lla.jpg',Id:7,Title:'Admin',Name:'莉莉安💞  管理员 Cheras'},
+  ]
+
   SoulersN=[
+    //6
     {Name:'Betty C. PG',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'Jarvis @KL',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'kendy-雪兰莪 ',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
-    {Name:'cabe k.k ',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    //{Name:'cabe k.k ',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'jb单纯老弟弟🙈🙉🙊 ',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'杰乐KL',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'匙羹🥄 kl ',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    //9
     {Name:'单纯的黄明順JB',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'马六甲渣男代表😎 ',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'vicky韪颀🐾KL🐾 ',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
@@ -181,19 +210,21 @@ export class HomeComponent implements OnInit {
     {Name:'Jia Hui-Johor ',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'单纯的麻坡人',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'PY@高渊',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    //12
     {Name:'SG静静看你说-Johor',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'华 Sarawak',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'Niki Ong - KL Bukit Jalil',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'圆圆 🌍高渊 ',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:' cindy-佩驊 ',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'vicky只负责看戏.... kl',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
-    {Name:'頭髮好亂 TW',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    //{Name:'頭髮好亂 TW',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'婉婷*槟城',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'单纯小阿姨Swk️Sg',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'⭐️今晚看星星⭐️KL',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
-    {Name:'祥荣Sarawak ',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'祥荣Sarawak ',Img:'详荣.jpg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'阿伟-新山',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'Ben Banting',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    //16
     {Name:'信',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'Sanco@selangor',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'Titan 😎 SEL',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
@@ -210,7 +241,8 @@ export class HomeComponent implements OnInit {
     {Name:'三月China',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'幃小寶 霹靂',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'传说。槟城 ',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
-    {Name:'璇 kuching',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    //14
+    //{Name:'璇 kuching',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'Kenz',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'夜@吉隆坡',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'阿蒙 jb',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
@@ -219,14 +251,15 @@ export class HomeComponent implements OnInit {
     {Name:'Lo Lock johor',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:' 紫莹  penang lang',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'Ah Yee吉隆坡',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
-    {Name:'栗子cherish(^ω^) JB',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
-    {Name:'珍珍️森美兰',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    //{Name:'栗子cherish(^ω^) JB',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'珍珍️森美兰',Img:'珍珍.jpg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     //{Name:'莉莉安 💞  Cheras',Img:'lla.jpg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'Hugo (KL)',Img:'hg.jpg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'yf_____baci KL',Img:'yf2.png',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'猫爷🦁槟城',Img:'my.jpg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'Liyee️  Sarawak',Img:'liyee.png',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'空空🤫pd',Img:'kongkong1.png',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    //17
     {Name:'Chun Sabah',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'不想谈恋爱  ks',Img:'kv.png',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'🥀路過🖤kl',Img:'cyn.jpg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
@@ -240,18 +273,53 @@ export class HomeComponent implements OnInit {
     {Name:'忠忠信信️Kajang',Img:'忠忠信信.jpg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'贝塔[怡保]',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'MICKY-JB',Img:'micky.jpg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
-    {Name:'TeNg Selangor',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
-    {Name:'🦁 Negeri Sembilan',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    //{Name:'TeNg Selangor',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    //{Name:'🦁 Negeri Sembilan',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'kaisoon as',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'浪里小白龙 China',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'China广西的穷孩子',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
     {Name:'JC o(´^｀)o KL',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
-   
+    //33
+    {Name:'🎈sg',Img:'ballon.jpg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'kokchin ～ kl',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'Wai Hong Ho Jb',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'文強pd',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'宝宝JB',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'T  jb',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'Iris_Blake PP',Img:'iris.jpg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'JY Tan，JB',Img:'jy.jpg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'星期日 🌝kl',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'HiunG kl',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'小弟kl',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'慧 PP',Img:'hui.jpg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'崽崽🙊JB ',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'汕 雪兰莪',Img:'jol.png',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:' 珊TRG',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'Ivan jb',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'神秘的活潑小可愛 KL',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'Jackal Sam KL',Img:'jac.jpg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'Collin China',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'Andy kl',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'乔安娜Joanna Selangor',Img:'qan.png',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'小男孩kl',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'Call me aj kl',Img:'jt.png',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'Mr.Jimmy kl',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'Yana雪妍',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'静静看热闹Rawang,MLK',Img:'jjj.jpg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'錒楊  馬六甲',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'Xtongz 馬六甲',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'Kendra Johor',Img:'kendra.jpg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'有点意思sg',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'jason@pj',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'Bernice （sarawak）',Img:'bernice.jpg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'Elane～吧生',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    {Name:'华 kl',Img:'user.svg',Nickname:'string',Age:'string',Height:'string',Weight:'string',Hobby:'string',Occupation:'string',Single:'string',Reason:'string'},
+    //end 33
   ]
 
   Admin=7;
-  OldSoul=60;
-  NewSoul=85;
+  //OldSoul=60;
+  NewSoul=114;
 
   modalReference: NgbModalRef;
   selectedSouler: Soulers;
